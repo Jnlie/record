@@ -1,0 +1,24 @@
+
+<html lang="en">
+<head>
+    <meta charset = "utf-8"/>
+    <title>Chat by Web Sockets</title>
+    <script type="text/javascript" src="js/recorderjs/recorder.js"> </script>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"> </script>
+
+    <style type='text/css'>
+
+    </style>
+</head>
+<body>
+
+<form action="server.cgi" method="post" enctype="multipart/form-data">
+  <input type="file" name="audio" accept="audio/*" capture>
+  <input type="submit" value="Upload">
+</form>
+<div></div>
+<div></div>
+<div></div>
+
+
+</body>
