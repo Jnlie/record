@@ -2,23 +2,15 @@
 <html lang="en">
 <head>
     <meta charset = "utf-8"/>
-    <title>Chat by Web Sockets</title>
+    <title>Record</title>
     <script type="text/javascript" src="js/recorderjs/recorder.js"> </script>
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"> </script>
+    <script type="text/javascript" src="js/shell.js"> </script>
 
-    <style type='text/css'>
-
-    </style>
+    <style type='text/css' src="css/bootstrap.min.css">   </style>
 </head>
 <body>
-
-<form action="server.cgi" method="post" enctype="multipart/form-data">
-  <input type="file" name="audio" accept="audio/*" capture>
-  <input type="submit" value="Upload">
-</form>
-<div></div>
-<div></div>
-<div></div>
-
-<input type="file" accept="audio/*;capture=microphone">
 </body>
+<script>
+    shell.init();
+</script>
