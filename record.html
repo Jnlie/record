@@ -2,15 +2,53 @@
 <html lang="en">
 <head>
     <meta charset = "utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Record</title>
     <script type="text/javascript" src="js/recorderjs/recorder.js"> </script>
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"> </script>
-    <script type="text/javascript" src="js/shell.js"> </script>
 
-    <style type='text/css' src="css/bootstrap.min.css">   </style>
+    <script type="text/javascript" src="js/configdata.js"> </script>
+    <script type="text/javascript" src="js/shell.js"> </script>
+    <script type="text/javascript" src="js/record.js"> </script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-8">
+            <button class="btn btn-default" type="submit">Button</button>
+        </div>
+        <div class="col-xs-6 col-md-4">
+            <button class="btn btn-default" type="submit">Button</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+        <!-- Optional: clear the XS cols if their content doesn't match in height -->
+        <div class="clearfix visible-xs-block"></div>
+        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+    </div>
+</div>
 </body>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 col-md-2 col-md-offset-4 col-xs-offset-2">
+                <button class="btn btn-default btn-block" type="submit" id="rec_btn">Button1</button>
+            </div>
+            <div class="col-xs-4 col-md-2">
+                <button class="btn btn-default btn-block" type="submit">Button</button>
+            </div>
+        </div>
+    </div>
+</nav>
+
 <script>
-    shell.init();
+    var main =new shell();
+    main.init();
 </script>
