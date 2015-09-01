@@ -1,0 +1,37 @@
+div{margin: 0px;padding: 0px;}
+
+#sen_p{
+    font-size: 17;
+    background-color: #cccccc;
+    border: none;margin: 20 0 20 0px;padding: 0px;
+}
+
+#index{
+    color:#eeeeee ;
+    top:10px;
+    font-size: 15;
+}
+
+body{
+    background-color: #eeeeee;
+}
+
+#sentence{
+    background-color: #cccccc;
+}
+
+#sentence-left{
+    background-color: #eeeeee;
+}
+
+#sentence-right{
+    background-color: #cccccc;
+}
+
+.navbar{
+    background-color: #999999;
+}
+
+button{
+    border: none;margin: 10 0 10 0px;
+}

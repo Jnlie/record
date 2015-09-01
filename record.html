@@ -11,38 +11,42 @@
     <script type="text/javascript" src="js/configdata.js"> </script>
     <script type="text/javascript" src="js/shell.js"> </script>
     <script type="text/javascript" src="js/record.js"> </script>
+    <script type="text/javascript" src="js/datainput.js"> </script>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/record.css" rel="stylesheet">
 </head>
 
 <body>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-8">
-            <button class="btn btn-default" type="submit">Button</button>
-        </div>
-        <div class="col-xs-6 col-md-4">
-            <button class="btn btn-default" type="submit">Button</button>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-md-11 col-md-offset-1  " id="index" >
+Rokid sound-recording system
+            </div>
         </div>
     </div>
+</nav>
+
+<div class="container-fluid" id="sentence">
     <div class="row">
-        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-        <!-- Optional: clear the XS cols if their content doesn't match in height -->
-        <div class="clearfix visible-xs-block"></div>
-        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+        <div class="col-xs-2 col-md-3" id ="sentence-left">
+        </div>
+        <div class="col-xs-7 col-md-6 col-md-offset-1 ">
+            <pre id="sen_p">
+            </pre>
+        </div>
     </div>
 </div>
 </body>
-
 <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-4 col-md-2 col-md-offset-4 col-xs-offset-2">
-                <button class="btn btn-default btn-block" type="submit" id="rec_btn">Button1</button>
+            <div class="col-xs-6 col-md-3 col-md-offset-3 col-xs-offset-1">
+                <button class="btn btn-default btn-block" type="submit" id="rec_btn">Start</button>
             </div>
-            <div class="col-xs-4 col-md-2">
-                <button class="btn btn-default btn-block" type="submit">Button</button>
+            <div class="col-xs-4 col-md-2 ">
+                <button class="btn btn-default btn-block" type="submit" id="next_btn">Next</button>
             </div>
         </div>
     </div>
@@ -51,4 +55,6 @@
 <script>
     var main =new shell();
     main.init();
+    $("#sentence")[0].style.marginTop=innerHeight*1/4;
+    $("#sentence-left")[0].style.height=$("#sentence")[0].offsetHeight;
 </script>

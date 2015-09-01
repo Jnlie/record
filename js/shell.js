@@ -1,15 +1,23 @@
 var record={};
 var shell = function(){
 
-    var init;
+    var init,getsentence;
 
     init = function(){
-        //record.datainput.init();
+        record.datainput.init();
+        record.data=configdata;
+        getsentence();
         record.bottom.init();
-        //record.head.init();
-        //record.sentence.init();
         //rencord.graph.init();
     }
+
+    getsentence =function(){
+        record.data.sentences =new Array();
+        for(var i =0;i<200;i++){
+            record.data.sentences.push("num:"+i)
+        }
+    }
+
 
     return{
         init:init
