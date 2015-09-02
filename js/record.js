@@ -4,7 +4,7 @@
     record.bottom =function(){
         //dom
         var rec_btn,       next_btn,     sentence,
-            index;
+            index,         senblock;
         // obj
         var rec;
         // int
@@ -45,6 +45,7 @@
             rec_btn = $("#rec_btn");
             next_btn =$("#next_btn");
             sentence = $("#sen_p");
+            senblock = $("#sentence");
             index = $("#index")
         };
 
@@ -79,7 +80,6 @@
                     processData: false,
                     contentType: false,
                     success:function(){
-                        console.log('suc');
                     },
                     error : function() {
                         console.log('fail');
@@ -87,20 +87,34 @@
                 });
             });
             record.data.present_number++;
-            sentence[0].innerText = record.data.sentences[record.data.present_number];
+            sentence[0].innerText = record.data.sentences[record.data.present_number-1];
             index[0].innerText = record.data.present_number+"/"+record.data.total_number;
+            $.cookie("rokid_record_presentnum",record.data.present_number);
+        }
 
+        start = function(){
+            rec_btn.fadeIn(2000);
+            next_btn.fadeIn(2000);
+            senblock.fadeIn(2000);
+            sentence[0].innerText = record.data.sentences[record.data.present_number-1];
+            index[0].innerText = record.data.present_number+"/"+record.data.total_number;
+            $("#sentence")[0].style.marginTop=innerHeight*1/4;
+            $("#sentence-left")[0].style.height=$("#sentence")[0].offsetHeight;
         }
 
         init = function(){
             find_ele();
+            rec_btn[0].style.display="none" ;
+            next_btn[0].style.display="none";
+            senblock[0].style.display="none";
 
             rec_btn.click(switch_record);
             next_btn.click(next_sentence);
         };
 
         return {
-            init:init
+            init:init,
+            start:start
         }
     }()
 }

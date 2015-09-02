@@ -35,3 +35,19 @@ body{
 button{
     border: none;margin: 10 0 10 0px;
 }
+
+#gender{
+    margin:10,0,0,0;
+}
+
+html {
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+
+#if_continue{
+    display: none;
+    position: absolute;
+    left: 40%;
+    top:40%;
+}

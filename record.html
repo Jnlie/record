@@ -7,6 +7,7 @@
     <title>Record</title>
     <script type="text/javascript" src="js/recorderjs/recorder.js"> </script>
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"> </script>
+    <script type="text/javascript" src="js/jquery.cookie.js"> </script>
 
     <script type="text/javascript" src="js/configdata.js"> </script>
     <script type="text/javascript" src="js/shell.js"> </script>
@@ -27,6 +28,43 @@ Rokid sound-recording system
         </div>
     </div>
 </nav>
+
+<div id="inputgroup">
+    <div class="input-group col-md-6 col-md-offset-3" id ="input">
+        <span class="input-group-addon" >Name</span>
+        <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1"  id="name">
+    </div>
+
+    <div class="input-group col-md-6 col-md-offset-3" >
+        <span class="input-group-addon" >Nationality</span>
+        <input type="text" class="form-control" placeholder="Nationality" aria-describedby="basic-addon1" id = "nation">
+    </div>
+    <div class="row"><br>
+    </div>
+    <div class="row">
+        <div class="btn-group col-xs-offset-2  col-sm-offset-4 col-md-offset-5" role="group" >
+            <button type="button" class="btn btn-default" disabled id="gender_value" >Gender:</button>
+            <button type="button" class="btn btn-default gender" >Male</button>
+            <button type="button" class="btn btn-default gender" >Female</button>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="btn-group col-xs-offset-2 col-sm-offset-4 col-md-offset-5" role="group" >
+            <button type="button" class="btn btn-default" disabled id="age_value" >Age:</button>
+            <button type="button" class="btn btn-default age"><18</button>
+            <button type="button" class="btn btn-default age">19~30</button>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="btn-group col-xs-offset-2 col-sm-offset-4 col-md-offset-5" role="group" >
+            <button type="button" class="btn btn-default age" >31~40</button>
+            <button type="button" class="btn btn-default age">41~60</button>
+            <button type="button" class="btn btn-default age">>60</button>
+        </div>
+    </div>
+</div>
 
 <div class="container-fluid" id="sentence">
     <div class="row">
@@ -49,12 +87,28 @@ Rokid sound-recording system
                 <button class="btn btn-default btn-block" type="submit" id="next_btn">Next</button>
             </div>
         </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <button class="btn btn-default btn-block" type="submit" id="start_record">Start</button>
+            </div>
+        </div>
     </div>
 </nav>
+
+<div id="if_continue">
+    <row><div class="col-xs-offset-1 col-md-offset-2">
+        Continue?
+        </div>
+    </row>
+    <row>
+
+        <button type="button" class="btn btn-default gender" id="continue_1" >Yes</button>
+        <button type="button" class="btn btn-default gender" id="continue_0">No</button>
+        </row>
+</div>
 
 <script>
     var main =new shell();
     main.init();
-    $("#sentence")[0].style.marginTop=innerHeight*1/4;
-    $("#sentence-left")[0].style.height=$("#sentence")[0].offsetHeight;
+    $("#input")[0].style.marginTop=innerHeight*1/4;
 </script>

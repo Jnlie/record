@@ -8,13 +8,15 @@ var shell = function(){
         record.data=configdata;
         getsentence();
         record.bottom.init();
+       // record.bottom.start();
         //rencord.graph.init();
+
     }
 
     getsentence =function(){
         record.data.sentences =new Array();
         for(var i =0;i<200;i++){
-            record.data.sentences.push("num:"+i)
+            record.data.sentences.push("num:"+(i+1))
         }
     }
 
